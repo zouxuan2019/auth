@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.zouxuan.auth.AuthAutoConfiguration,\
+com.zouxuan.auth.AuthInterceptor
