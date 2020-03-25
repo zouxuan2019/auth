@@ -16,7 +16,7 @@ public class AuthImp {
     public boolean authorize(String token, PermissionScope permissionScope) {
         System.out.println( "authorize:" + authProperties.getServer() );
         return
-               permissionScope.full()
-                || (token != null && Arrays.stream( permissionScope.value() ).anyMatch( token::contains ));
+                permissionScope.full()
+                        || (token != null && Arrays.stream( permissionScope.value() ).anyMatch( token::contains ));
     }
 }
