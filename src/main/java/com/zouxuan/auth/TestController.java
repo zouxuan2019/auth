@@ -11,4 +11,9 @@ public class TestController {
     public void test1() {
         System.out.println( "ok" );
     }
+
+    @GetMapping("/anon/test2")
+    public void test2() {
+        System.out.println( "bbb" );
+    }
 }

@@ -13,10 +13,10 @@ public class AuthImp {
     }
 
 
-    public boolean authorize(String url, String token, PermissionScope permissionScope) {
+    public boolean authorize(String token, PermissionScope permissionScope) {
         System.out.println( "authorize:" + authProperties.getServer() );
-        return url.contains( "/anon" )
-                || permissionScope.full()
+        return
+               permissionScope.full()
                 || (token != null && Arrays.stream( permissionScope.value() ).anyMatch( token::contains ));
     }
 }

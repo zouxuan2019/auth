@@ -1,6 +1,11 @@
 GET http://localhost:8080/test1
 Accept: application/json
 
+###
+
+GET http://localhost:8080/anon/test2
+Accept: application/json
+
 #### For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
 #
 # Following HTTP Request Live Templates are available:

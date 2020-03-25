@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 @Configuration
-public class InterceptorRegister extends WebMvcConfigurationSupport {
+public class WebMvcConfig extends WebMvcConfigurationSupport {
 
     @Autowired
     private AuthInterceptor authInterceptor;
@@ -16,6 +16,6 @@ public class InterceptorRegister extends WebMvcConfigurationSupport {
     public void addInterceptors(InterceptorRegistry registry) {
         System.out.println( "interceptor added" );
 
-        registry.addInterceptor( authInterceptor );
+        registry.addInterceptor( authInterceptor ).excludePathPatterns( "/anon/*" );
     }
 }
