@@ -2,6 +2,7 @@ package com.zouxuan.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -18,6 +19,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
+        System.out.println( "interceptor preHandle" );
         System.out.println( "dispatcher name:" + request.getDispatcherType().name() );
         if (!request.getDispatcherType().name().equals( "REQUEST" )) {
             return true;

@@ -1,10 +1,12 @@
 package com.zouxuan.auth;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
 @Component
+@Configuration
 public class AuthImp {
     private AuthProperties authProperties;
 

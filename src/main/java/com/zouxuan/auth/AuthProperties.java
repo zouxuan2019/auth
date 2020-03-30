@@ -4,7 +4,7 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties(prefix = "zouxuan.auth")
+@ConfigurationProperties("zouxuan.auth")
 @Component
 @Data
 public class AuthProperties {
